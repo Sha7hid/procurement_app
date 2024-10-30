@@ -1,9 +1,12 @@
 import express from 'express';
 import { connect } from 'mongoose';
 import cors from 'cors';
-import { json, urlencoded } from 'body-parser';
+import pkg from 'body-parser';
+const { json, urlencoded } = pkg;
 import { config } from 'dotenv';
-import path from 'path';
+import supplierRoutes from './routes/supplierRoutes.js';
+import itemRoutes from './routes/itemRoutes.js';
+import purchaseOrderRoutes from './routes/purchaseOrderRoutes.js';
 
 // Load environment variables
 config();
@@ -25,15 +28,12 @@ connect(process.env.MONGO_URI, {
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB:', err));
 
-// // Routes
-// const supplierRoutes = require('./routes/supplierRoutes');
-// const itemRoutes = require('./routes/itemRoutes');
-// const purchaseOrderRoutes = require('./routes/purchaseOrderRoutes');
 
-// // Use routes
-// app.use('/api/suppliers', supplierRoutes);
-// app.use('/api/items', itemRoutes);
-// app.use('/api/purchase-orders', purchaseOrderRoutes);
+
+// Use routes
+app.use('/api/suppliers', supplierRoutes);
+app.use('/api/items', itemRoutes);
+app.use('/api/purchase-orders', purchaseOrderRoutes);
 
 // // Serve frontend static files in production
 // if (process.env.NODE_ENV === 'production') {

@@ -6,7 +6,7 @@ const ItemSchema = new Schema({
     inventoryLocation: String,
     brand: String,
     category: String,
-    supplier: { type: mongoose.Schema.Types.ObjectId, ref: 'Supplier' },
+    supplier: { type: Schema.Types.ObjectId, ref: 'Supplier' },
     stockUnit: String,
     unitPrice: Number,
     itemImages: [String],

@@ -3,12 +3,12 @@ import { Schema, model } from 'mongoose';
 const PurchaseOrderSchema = new Schema({
     orderNo: { type: Number, auto: true },
     orderDate: { type: Date, default: Date.now },
-    supplier: { type: mongoose.Schema.Types.ObjectId, ref: 'Supplier' },
+    supplier: { type: Schema.Types.ObjectId, ref: 'Supplier' },
     itemTotal: { type: Number, default: 0 },
     discount: { type: Number, default: 0 },
     netAmount: { type: Number, default: 0 },
     items: [{
-        item: { type: mongoose.Schema.Types.ObjectId, ref: 'Item' },
+        item: { type: Schema.Types.ObjectId, ref: 'Item' },
         stockUnit: String,
         unitPrice: Number,
         packingUnit: String,
