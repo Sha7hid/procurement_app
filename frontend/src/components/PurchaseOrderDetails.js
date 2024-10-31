@@ -69,9 +69,12 @@ function PurchaseOrderDetails() {
                 <table className="order-items-table">
                     <thead>
                         <tr>
+                            <th>Item No</th>
                             <th>Item Name</th>
                             <th>Quantity</th>
                             <th>Unit Price</th>
+                            <th>Stock Unit</th>
+                            <th>Packing Unit</th>
                             <th>Discount</th>
                             <th>Item Total</th>
                             <th>Net Amount</th>
@@ -80,9 +83,12 @@ function PurchaseOrderDetails() {
                     <tbody>
                         {order.items.map((itemDetail, index) => (
                             <tr key={index}>
+                                <td>{itemDetail.item?.itemNo}</td>
                                 <td>{itemDetail.item?.itemName || 'Unknown Item'}</td>
                                 <td>{itemDetail.orderQty}</td>
                                 <td>${itemDetail.unitPrice.toFixed(2)}</td>
+                                <td>{itemDetail.stockUnit}</td>
+                                <td>{itemDetail.packingUnit}</td>
                                 <td>${itemDetail.discount.toFixed(2)}</td>
                                 <td>${itemDetail.itemAmount.toFixed(2)}</td>
                                 <td>${itemDetail.netAmount.toFixed(2)}</td>
