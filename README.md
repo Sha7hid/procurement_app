@@ -1,3 +1,7 @@
 # procurement_app
-# frontend - port 3000 - npm start
-# backend - port 5000 - npm start
+# frontend 
+- suppliers
+- items
+- purchase orders
+# backend 
+npm start - to start the server
