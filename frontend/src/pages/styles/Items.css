@@ -1,0 +1,80 @@
+.items-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    /* Center the button */
+    margin-bottom: 20px;
+    /* Add some space below the button */
+}
+
+.button-div button {
+    background-color: #007bff;
+    /* Button color */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding for the button */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor changes to pointer on hover */
+    margin-bottom: 20px;
+    /* Space below the button */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+    width: auto;
+    /* Set width to auto for normal size */
+    display: inline-block;
+    /* Make the button inline-block to fit content */
+}
+.delete-btn {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.delete-btn:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+
+.button-div button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.items-table {
+    width: 100%;
+    /* Full width */
+    border-collapse: collapse;
+    /* Remove space between borders */
+    margin-top: 20px;
+    /* Add space above the table */
+}
+
+.items-table th,
+.items-table td {
+    padding: 10px;
+    /* Add padding */
+    border: 1px solid #ddd;
+    /* Light gray border */
+}
+
+.items-table th {
+    background-color: #f2f2f2;
+    /* Light gray background for header */
+}
+
+.items-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Zebra striping */
+}

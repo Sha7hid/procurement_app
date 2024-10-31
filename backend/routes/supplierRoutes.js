@@ -1,6 +1,6 @@
-import { Router } from 'express';
+const { Router } = require('express');
 const supplierRoutes = Router();
-import { createSupplier, getAllSuppliers, getSupplierById, updateSupplier, deleteSupplier } from '../controllers/supplierController.js';
+const { createSupplier, getAllSuppliers, getSupplierById, updateSupplier, deleteSupplier } = require('../controllers/supplierController'); // Changed to CommonJS require
 
 // Create a new supplier
 supplierRoutes.post('/', createSupplier);
@@ -17,4 +17,4 @@ supplierRoutes.put('/:id', updateSupplier);
 // Delete a supplier by ID
 supplierRoutes.delete('/:id', deleteSupplier);
 
-export default supplierRoutes;
+module.exports = supplierRoutes; // Changed to CommonJS export

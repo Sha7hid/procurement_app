@@ -1,13 +1,9 @@
-// controllers/purchaseOrderController.js
-
-import Purchase from "../models/purchase.js";
+const Purchase = require('../models/purchase');
 
 // Create a new purchase order
-export async function createPurchaseOrder(req, res) {
+async function createPurchaseOrder(req, res) {
   try {
     const purchaseOrder = new Purchase(req.body);
-
-    // Calculate itemTotal, discount, and netAmount
     let itemTotal = 0;
     let totalDiscount = 0;
 
@@ -32,7 +28,7 @@ export async function createPurchaseOrder(req, res) {
 }
 
 // Get all purchase orders
-export async function getAllPurchaseOrders(req, res) {
+async function getAllPurchaseOrders(req, res) {
   try {
     const purchaseOrders = await Purchase.find().populate('supplier').populate('items.item');
     res.status(200).json(purchaseOrders);
@@ -42,7 +38,7 @@ export async function getAllPurchaseOrders(req, res) {
 }
 
 // Get a purchase order by ID
-export async function getPurchaseOrderById(req, res) {
+async function getPurchaseOrderById(req, res) {
   try {
     const purchaseOrder = await Purchase.findById(req.params.id).populate('supplier').populate('items.item');
     if (!purchaseOrder) return res.status(404).json({ message: 'Purchase order not found' });
@@ -53,7 +49,7 @@ export async function getPurchaseOrderById(req, res) {
 }
 
 // Update a purchase order
-export async function updatePurchaseOrder(req, res) {
+async function updatePurchaseOrder(req, res) {
   try {
     const updatedPurchaseOrder = await Purchase.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedPurchaseOrder) return res.status(404).json({ message: 'Purchase order not found' });
@@ -64,7 +60,7 @@ export async function updatePurchaseOrder(req, res) {
 }
 
 // Delete a purchase order
-export async function deletePurchaseOrder(req, res) {
+async function deletePurchaseOrder(req, res) {
   try {
     const deletedPurchaseOrder = await Purchase.findByIdAndDelete(req.params.id);
     if (!deletedPurchaseOrder) return res.status(404).json({ message: 'Purchase order not found' });
@@ -73,3 +69,11 @@ export async function deletePurchaseOrder(req, res) {
     res.status(500).json({ message: 'Error deleting purchase order', error });
   }
 }
+
+module.exports = {
+  createPurchaseOrder,
+  getAllPurchaseOrders,
+  getPurchaseOrderById,
+  updatePurchaseOrder,
+  deletePurchaseOrder,
+};

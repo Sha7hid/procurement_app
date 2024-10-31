@@ -1,6 +1,6 @@
-import { Router } from 'express';
+const { Router } = require('express');
 const itemRoutes = Router();
-import { createItem, getAllItems, getItemById, updateItem, deleteItem } from '../controllers/itemController.js';
+const { createItem, getAllItems, getItemById, updateItem, deleteItem } = require('../controllers/itemController');
 
 // Create a new item
 itemRoutes.post('/', createItem);
@@ -17,4 +17,4 @@ itemRoutes.put('/:id', updateItem);
 // Delete an item by ID
 itemRoutes.delete('/:id', deleteItem);
 
-export default itemRoutes;
+module.exports = itemRoutes;

@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: center; /* Center the links */
+    background-color: #007bff; /* Navbar background color */
+    padding: 10px 0; /* Padding above and below the links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+  }
+  
+  nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding around the links */
+    margin: 0 10px; /* Margin between links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for background and transform */
+  }
+  
+  nav a:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  

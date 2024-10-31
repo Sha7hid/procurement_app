@@ -1,7 +1,8 @@
-import { Schema, model } from 'mongoose';
+const { Schema, model } = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const SupplierSchema = new Schema({
-    supplierNo: { type: Number, auto: true },
+    supplierNo: { type: String, default: uuidv4 },
     supplierName: { type: String, required: true },
     address: String,
     taxNo: String,
@@ -13,4 +14,4 @@ const SupplierSchema = new Schema({
 
 const Supplier = model('Supplier', SupplierSchema);
 
-export default Supplier;
+module.exports = Supplier;

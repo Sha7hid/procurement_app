@@ -1,7 +1,8 @@
-import { Schema, model } from 'mongoose';
+const { Schema, model } = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const PurchaseOrderSchema = new Schema({
-    orderNo: { type: Number, auto: true },
+    orderNo: { type: String, default: uuidv4 },
     orderDate: { type: Date, default: Date.now },
     supplier: { type: Schema.Types.ObjectId, ref: 'Supplier' },
     itemTotal: { type: Number, default: 0 },
@@ -19,6 +20,6 @@ const PurchaseOrderSchema = new Schema({
     }]
 });
 
-const Purchase = model('PurchaseOrder', PurchaseOrderSchema);
+const PurchaseOrder = model('PurchaseOrder', PurchaseOrderSchema);
 
-export default Purchase;
+module.exports = PurchaseOrder;

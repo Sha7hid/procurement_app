@@ -1,0 +1,78 @@
+.suppliers-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.add-supplier-btn {
+  background-color: #007bff;
+  /* Button color */
+  color: white;
+  /* Text color */
+  padding: 10px 20px;
+  /* Padding for the button */
+  border: none;
+  /* Remove border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Cursor changes to pointer on hover */
+  margin-bottom: 20px;
+  /* Space below the button */
+  transition: background-color 0.3s;
+  /* Smooth transition */
+  width: auto;
+  /* Set width to auto for normal size */
+  display: inline-block;
+  /* Make the button inline-block to fit content */
+}
+
+.add-supplier-btn:hover {
+  background-color: #0056b3;
+  /* Darker color on hover */
+}
+.delete-btn {
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 5px 10px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.delete-btn:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+
+
+.suppliers-table {
+  width: 100%;
+  /* Full width table */
+  border-collapse: collapse;
+  /* Collapse borders */
+}
+
+.suppliers-table th,
+.suppliers-table td {
+  border: 1px solid #ddd;
+  /* Light border */
+  padding: 8px;
+  /* Padding for cells */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.suppliers-table th {
+  background-color: #f2f2f2;
+  /* Light grey background for headers */
+}
+
+.suppliers-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Zebra striping for even rows */
+}
+
+.suppliers-table tr:hover {
+  background-color: #f1f1f1;
+  /* Highlight row on hover */
+}

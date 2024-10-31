@@ -1,0 +1,99 @@
+.purchase-order-form {
+    max-width: 600px; /* Max width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background */
+}
+
+.purchase-order-form h2,
+.purchase-order-form h3,
+.purchase-order-form h4 {
+    margin-bottom: 10px; /* Margin below headers */
+    color: #333; /* Dark gray color */
+}
+/* src/styles/PurchaseOrderForm.css */
+
+.purchase-order-form {
+    max-width: 800px; /* Increase the maximum width for the form */
+    margin: auto; /* Center the form */
+    padding: 20px; /* Add padding around the form */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: #f9f9f9; /* Optional: Background color */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between each input */
+  }
+  
+  .item-selection {
+    display: flex; /* Align items in a row */
+    flex-wrap: wrap; /* Allow wrapping to new lines if needed */
+    gap: 10px; /* Space between item selection fields */
+  }
+  
+  .item-selection .form-group {
+    flex: 1 1 150px; /* Flex-grow and flex-basis for better width handling */
+    min-width: 150px; /* Minimum width for input fields */
+  }
+  
+  .total-summary {
+    margin-top: 20px; /* Space above the summary section */
+    font-weight: bold; /* Make the total summary stand out */
+  }
+  
+  /* Optional: Toast custom styles */
+  .toast-custom {
+    background-color: #4CAF50; /* Change background color of toast */
+    color: white; /* Change text color */
+  }
+  
+
+.purchase-order-form select,
+.purchase-order-form input {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Space below each input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.item-selection {
+    display: flex; /* Flex layout for item inputs */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+}
+
+.item-selection input {
+    width: 100px; /* Fixed width for quantity and discount */
+}
+
+.purchase-order-form button {
+    padding: 10px 15px; /* Add padding to buttons */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text color */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.purchase-order-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.purchase-order-form ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+}
+
+.purchase-order-form ul li {
+    margin: 5px 0; /* Space between list items */
+    padding: 5px; /* Padding inside list items */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+}

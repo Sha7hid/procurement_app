@@ -1,18 +1,18 @@
-import Supplier from "../models/supplier.js";
+const Supplier = require('../models/supplier');
 
 // Create a new supplier
-export async function createSupplier(req, res) {
+async function createSupplier(req, res) {
     try {
         const supplier = new Supplier(req.body);
         const savedSupplier = await supplier.save();
-        res.status(201).json(savedSupplier);
+        res.status(200).json(savedSupplier);
     } catch (error) {
         res.status(500).json({ message: 'Error creating supplier', error });
     }
 }
 
 // Get all suppliers
-export async function getAllSuppliers(req, res) {
+async function getAllSuppliers(req, res) {
     try {
         const suppliers = await Supplier.find();
         res.status(200).json(suppliers);
@@ -22,7 +22,7 @@ export async function getAllSuppliers(req, res) {
 }
 
 // Get a supplier by ID
-export async function getSupplierById(req, res) {
+async function getSupplierById(req, res) {
     try {
         const supplier = await Supplier.findById(req.params.id);
         if (!supplier) return res.status(404).json({ message: 'Supplier not found' });
@@ -33,7 +33,7 @@ export async function getSupplierById(req, res) {
 }
 
 // Update a supplier
-export async function updateSupplier(req, res) {
+async function updateSupplier(req, res) {
     try {
         const updatedSupplier = await Supplier.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!updatedSupplier) return res.status(404).json({ message: 'Supplier not found' });
@@ -44,7 +44,7 @@ export async function updateSupplier(req, res) {
 }
 
 // Delete a supplier
-export async function deleteSupplier(req, res) {
+async function deleteSupplier(req, res) {
     try {
         const deletedSupplier = await Supplier.findByIdAndDelete(req.params.id);
         if (!deletedSupplier) return res.status(404).json({ message: 'Supplier not found' });
@@ -53,3 +53,11 @@ export async function deleteSupplier(req, res) {
         res.status(500).json({ message: 'Error deleting supplier', error });
     }
 }
+
+module.exports = {
+    createSupplier,
+    getAllSuppliers,
+    getSupplierById,
+    updateSupplier,
+    deleteSupplier,
+};

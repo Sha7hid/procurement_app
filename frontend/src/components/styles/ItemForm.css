@@ -1,0 +1,63 @@
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/* src/styles/ItemForm.css */
+
+.form-row {
+    display: flex; /* Use flexbox for row alignment */
+    justify-content: space-between; /* Space between items */
+    margin-bottom: 1rem; /* Space below each row */
+    gap: 25px;
+}
+
+.form-group {
+    flex: 1; /* Allow flex items to grow and fill the row */
+    margin-right: 1rem; /* Space between items */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin on the last item */
+}
+
+.image-preview {
+    width: 50px; /* Set width for image preview */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+button[type="button"] {
+  margin-left: 10px;
+}
+
+.image-preview {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}

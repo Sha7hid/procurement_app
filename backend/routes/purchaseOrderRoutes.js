@@ -1,6 +1,6 @@
-import { Router } from 'express';
+const { Router } = require('express');
 const purchaseOrderRoutes = Router();
-import { createPurchaseOrder, getAllPurchaseOrders, getPurchaseOrderById, updatePurchaseOrder, deletePurchaseOrder } from '../controllers/purchaseOrderController.js';
+const { createPurchaseOrder, getAllPurchaseOrders, getPurchaseOrderById, updatePurchaseOrder, deletePurchaseOrder } = require('../controllers/purchaseOrderController'); // Changed to CommonJS require
 
 // Create a new purchase order
 purchaseOrderRoutes.post('/', createPurchaseOrder);
@@ -17,4 +17,4 @@ purchaseOrderRoutes.put('/:id', updatePurchaseOrder);
 // Delete a purchase order by ID
 purchaseOrderRoutes.delete('/:id', deletePurchaseOrder);
 
-export default purchaseOrderRoutes;
+module.exports = purchaseOrderRoutes; // Changed to CommonJS export

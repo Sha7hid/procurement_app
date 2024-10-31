@@ -1,0 +1,83 @@
+.purchase-order-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-order-details h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.purchase-order-details p {
+    color: #555;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.order-items-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.order-items-table th, .order-items-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.order-items-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+.button-div {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-bottom: 20px; /* Add some space below the button */
+}
+/* General button styles */
+button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Smaller padding for a smaller button */
+    font-size: 14px; /* Adjusted font size for a smaller appearance */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    width: auto; /* Automatically adjust width based on content */
+}
+.button{
+    margin:25px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Button focus style */
+button:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue shadow */
+}
+
+/* Button disabled style */
+button:disabled {
+    background-color: #ccc; /* Gray background */
+    cursor: not-allowed; /* Not allowed cursor */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+
+@media (max-width: 600px) {
+    .purchase-order-details {
+        padding: 15px;
+    }
+}
